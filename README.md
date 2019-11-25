@@ -1,68 +1,47 @@
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+# Vinyl Club - App Client
 
-## Available Scripts
+## About this project
 
-In the project directory, you can run:
+Vinyl Club is a project built for practice purposes. The idea was to develop a simple app that allows local registered users / record collectors to exchange vinyl records from their collections.
 
-### `npm start`
+Related repos:
 
-Runs the app in the development mode.<br />
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+- **[App Server](https://github.com/future-ruins/vinyl-club-server)**
+  Contains endpoints and database models.
 
-The page will reload if you make edits.<br />
-You will also see any lint errors in the console.
+## Table of contents:
 
-### `npm test`
+- **[How to install](#how-to-install)**
+- **[Features built so far](#features-built-so-far-and-the-routes)**
+- **[Create React App docs](#create-react-app)**
 
-Launches the test runner in the interactive watch mode.<br />
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+## How to install
 
-### `npm run build`
+1. Clone the git repository
 
-Builds the app for production to the `build` folder.<br />
-It correctly bundles React in production mode and optimizes the build for the best performance.
+`git clone git@github.com:future-ruins/vinyl-club-client.git`
 
-The build is minified and the filenames include the hashes.<br />
-Your app is ready to be deployed!
+In the project directory
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+2. Run `npm install`
+3. Run `npm start`. The app runs in the development mode on http://localhost:3000 in the browser.
 
-### `npm run eject`
+4. Checkout the **[Server ReadMe](https://github.com/future-ruins/vinyl-club-server/blob/development/README.md)** to install and run the server.
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+## Features built so far
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+- **Sign-up and login pages:** users can sign-up and login to use the App
 
-Instead, it will copy all the configuration files and the transitive dependencies (Webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+- **Records board:** a page that displays a list of all the records that are up for exchange, with the latest added records showing up on top. Users can search the list of records by artist or by genre
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+- **Record page:** when clicking on a record on the board, a user is redirected to a page displaying the details about that record including info, a picture, the name of the user that posted the record for exchange and comments. Logged-in users can view all the records posted by another member for exchange (by clicking on the name), message this user for exchange purposes via a form, leave comments on the record.
 
-## Learn More
+- **User Menu:** When a user logs in, a menu is visualized that allows member-only functionalities: adding a new record for exchange, editing a posted record, posting comments on a record, signaling interest in a record.
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+For an overview of features to be implemented or to be fixed check: **[Issues](https://github.com/future-ruins/vinyl-club-client/issues)**
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+## Create React App
 
-### Code Splitting
+This project was scaffolded using the create-react-app cli.
 
-This section has moved here: https://facebook.github.io/create-react-app/docs/code-splitting
-
-### Analyzing the Bundle Size
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size
-
-### Making a Progressive Web App
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app
-
-### Advanced Configuration
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/advanced-configuration
-
-### Deployment
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/deployment
-
-### `npm run build` fails to minify
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify
+The standard create-react-app docs can be found **[here](./create-react-app-docs.md)**
