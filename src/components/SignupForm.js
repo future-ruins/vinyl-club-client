@@ -26,19 +26,32 @@ const classes = makeStyles(theme => ({
   },
 }));
 
-export default class LoginForm extends Component {
+export default class SignupForm extends Component {
   render() {
     const { onChange, onSubmit } = this.props;
-    const { email, password } = this.props.values;
+    const { email, password, username } = this.props.values;
 
     return (
       <Container component='main' maxWidth='xs'>
         <CssBaseline />
         <div className={classes.paper}>
           <Typography component='h1' variant='h5'>
-            Log in
+            Sign Up
           </Typography>
           <form className={classes.form} noValidate onSubmit={onSubmit}>
+            <TextField
+              variant='outlined'
+              margin='normal'
+              required
+              fullWidth
+              id='username'
+              label='Username'
+              name='username'
+              autoComplete='username'
+              autoFocus
+              value={username}
+              onChange={onChange}
+            />
             <TextField
               variant='outlined'
               margin='normal'
@@ -75,7 +88,7 @@ export default class LoginForm extends Component {
               variant='contained'
               color='primary'
               className={classes.submit}>
-              Log In
+              Sign Up
             </Button>
             <Grid container>
               <Grid item xs>
@@ -84,8 +97,8 @@ export default class LoginForm extends Component {
                 </Link>
               </Grid>
               <Grid item>
-                <Link href='/signup' variant='body2'>
-                  {"Don't have an account? Sign Up"}
+                <Link href='/Login' variant='body2'>
+                  {'Already have an account? Log in'}
                 </Link>
               </Grid>
             </Grid>

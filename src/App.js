@@ -2,9 +2,9 @@ import React, { Component } from 'react';
 import Typography from '@material-ui/core/Typography';
 import store from './store';
 import { Provider } from 'react-redux';
-import { BrowserRouter as Route, Link } from 'react-router-dom';
+import { Link } from 'react-router-dom';
 import logo from './images/headset-24px.svg';
-import LoginFormContainer from './components/LoginFormContainer';
+import Homepage from './components/Homepage';
 
 class App extends Component {
   render() {
@@ -15,11 +15,10 @@ class App extends Component {
             <img className='icon' height='40px' alt='app logo' src={logo}></img>
           </Link>
         </header>
-        <>
-          <Route path='/' exact component={App} />
-        </>
 
-        <LoginFormContainer></LoginFormContainer>
+        <main>
+          <Homepage></Homepage>
+        </main>
 
         <footer>
           <br />
