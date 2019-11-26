@@ -4,7 +4,7 @@ import store from './store';
 import { Provider } from 'react-redux';
 import { BrowserRouter as Route, Link } from 'react-router-dom';
 import logo from './images/headset-24px.svg';
-import LoginForm from './components/LoginForm';
+import LoginFormContainer from './components/LoginFormContainer';
 
 class App extends Component {
   render() {
@@ -18,9 +18,8 @@ class App extends Component {
         <>
           <Route path='/' exact component={App} />
         </>
-        <body>
-          <LoginForm></LoginForm>
-        </body>
+
+        <LoginFormContainer></LoginFormContainer>
 
         <footer>
           <br />
