@@ -28,6 +28,9 @@ const classes = makeStyles(theme => ({
 
 export default class LoginForm extends Component {
   render() {
+    const { onChange, onSubmit } = this.props;
+    const { email, password } = this.props.values;
+
     return (
       <Container component='main' maxWidth='xs'>
         <CssBaseline />
@@ -35,7 +38,7 @@ export default class LoginForm extends Component {
           <Typography component='h1' variant='h5'>
             Sign in
           </Typography>
-          <form className={classes.form} noValidate>
+          <form className={classes.form} noValidate onSubmit={onSubmit}>
             <TextField
               variant='outlined'
               margin='normal'
@@ -46,6 +49,8 @@ export default class LoginForm extends Component {
               name='email'
               autoComplete='email'
               autoFocus
+              value={email}
+              onChange={onChange}
             />
             <TextField
               variant='outlined'
@@ -57,6 +62,8 @@ export default class LoginForm extends Component {
               type='password'
               id='password'
               autoComplete='current-password'
+              value={password}
+              onChange={onChange}
             />
             <FormControlLabel
               control={<Checkbox value='remember' color='primary' />}
