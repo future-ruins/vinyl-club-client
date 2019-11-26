@@ -29,7 +29,7 @@ class SignupFormContainer extends Component {
 
   render() {
     if (this.props.user.jwt) {
-      return <Redirect to='/' />;
+      return <Redirect to='/records-board' />;
     } else {
       return (
         <React.Fragment>

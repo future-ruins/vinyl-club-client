@@ -41,9 +41,10 @@ export const signup = data => {
           .send({ email: data.email, password: data.password });
       })
       .then(response => {
+        const { jwt, userId, username } = response.body;
         dispatch({
           type: USER_LOGIN,
-          payload: response.body.jwt,
+          payload: { jwt, userId, username },
         });
       })
       .catch(error => {

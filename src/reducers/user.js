@@ -11,7 +11,11 @@ export default function(state = initialState, action = {}) {
     case SET_ERROR:
       return { ...state, error: action.payload };
     case USER_LOGIN:
-      return { ...state, ...action.payload, error: null };
+      return {
+        ...state,
+        ...action.payload,
+        error: null,
+      };
     case USER_LOGOUT:
       return initialState;
     default:
