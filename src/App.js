@@ -4,6 +4,7 @@ import store from './store';
 import { Provider } from 'react-redux';
 import { BrowserRouter as Route, Link } from 'react-router-dom';
 import logo from './images/headset-24px.svg';
+import LoginForm from './components/LoginForm';
 
 class App extends Component {
   render() {
@@ -13,14 +14,13 @@ class App extends Component {
           <Link to='/'>
             <img className='icon' height='40px' alt='app logo' src={logo}></img>
           </Link>
-          <Typography variant='h2' align='center'>
-            {'Vinyl Club '}
-          </Typography>
         </header>
-
         <>
           <Route path='/' exact component={App} />
         </>
+        <body>
+          <LoginForm></LoginForm>
+        </body>
 
         <footer>
           <br />
