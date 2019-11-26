@@ -1,33 +1,65 @@
 import request from 'superagent';
-const baseUrl = 'http://localhost:4000';
+const baseURL = 'http://localhost:4000';
 
-export const LOGIN = 'LOGIN';
+export const SET_ERROR = 'SET_ERROR';
 
-export const login = (email, password) => dispatch => {
-  request
-    .post(`${baseUrl}/login`)
-    .send({ email, password })
-    .then(response => {
-      //I expect the response to have a jwt
-      const { jwt, userId, username } = response.body;
-      dispatch({
-        type: LOGIN,
-        payload: { jwt, userId, username },
+// USER LOGIN
+export const USER_LOGIN = 'USER_LOGIN';
+export const login = (email, password) => {
+  return dispatch => {
+    request
+      .post(`${baseURL}/login`)
+      .send({ email, password })
+      .then(response => {
+        const { jwt, userId, username } = response.body;
+        dispatch({
+          type: USER_LOGIN,
+          payload: { jwt, userId, username },
+        });
+      })
+      .catch(error => {
+        console.error(error);
+        dispatch({
+          type: SET_ERROR,
+          payload: error.response.body.message,
+        });
       });
-    })
-    .catch(console.error);
+  };
 };
 
-export const signup = (username, email, password) => dispatch => {
-  request
-    .post(`${baseUrl}/user`)
-    .send({ username, email, password })
-    .catch(console.error);
+// USER SIGNUP
+export const USER_SIGNUP = 'USER_SIGNUP';
+export const signup = data => {
+  return dispatch => {
+    request
+      .post(`${baseURL}/user`)
+      .send(data)
+      .then(() => {
+        // If user is created successfully, login user
+        return request
+          .post(`${baseURL}/login`)
+          .send({ email: data.email, password: data.password });
+      })
+      .then(response => {
+        dispatch({
+          type: USER_LOGIN,
+          payload: response.body.jwt,
+        });
+      })
+      .catch(error => {
+        console.error(error);
+        dispatch({
+          type: SET_ERROR,
+          payload: error.response.body.message,
+        });
+      });
+  };
 };
 
-export const LOGOUT = 'LOGOUT';
+// USER LOGOUT
+export const USER_LOGOUT = 'USER_LOGOUT';
 export const logout = () => {
   return {
-    type: LOGOUT,
+    type: USER_LOGOUT,
   };
 };
