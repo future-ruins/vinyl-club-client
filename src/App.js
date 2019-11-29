@@ -5,9 +5,9 @@ import { Provider } from 'react-redux';
 import { BrowserRouter, Route } from 'react-router-dom';
 import { Link } from 'react-router-dom';
 import logo from './images/headset-24px.svg';
-import RecordsBoard from './components/RecordsBoard';
 import LoginFormContainer from './components/LoginFormContainer';
 import SignupFormContainer from './components/SignupFormContainer';
+import RecordsBoardContainer from './components/RecordsBoardContainer';
 
 class App extends Component {
   render() {
@@ -24,7 +24,11 @@ class App extends Component {
             </Link>
           </header>
 
-          <Route path='/records-board' exact component={RecordsBoard} />
+          <Route
+            path='/records-board'
+            exact
+            component={RecordsBoardContainer}
+          />
           <Route path='/' exact component={LoginFormContainer} />
           <Route path='/login' exact component={LoginFormContainer} />
           <Route path='/signup' exact component={SignupFormContainer} />

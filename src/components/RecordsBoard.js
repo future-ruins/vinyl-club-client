@@ -45,7 +45,7 @@ const classes = makeStyles(theme => ({
 
 export default class RecordsBoard extends Component {
   render() {
-    const cards = [1, 2, 3, 4, 5, 6, 7, 8, 9];
+    const cards = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
     return (
       <React.Fragment>
         <CssBaseline />
