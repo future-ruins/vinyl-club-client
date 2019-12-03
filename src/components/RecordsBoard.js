@@ -86,8 +86,11 @@ export default class RecordsBoard extends Component {
                     <Card className={classes.card}>
                       <CardMedia
                         className={classes.cardMedia}
+                        component='img'
+                        alt='record cover'
+                        height='160'
                         image={`${card.img}`}
-                        title={card.title}
+                        title='Title'
                       />
                       <CardContent className={classes.cardContent}>
                         <Typography gutterBottom variant='h5' component='h2'>
