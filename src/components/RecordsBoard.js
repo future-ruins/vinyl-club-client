@@ -45,7 +45,10 @@ const classes = makeStyles(theme => ({
 
 export default class RecordsBoard extends Component {
   render() {
-    const cards = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
+    const records = this.props.records;
+    const cards = records;
+    console.log('cards', cards);
+
     return (
       <React.Fragment>
         <CssBaseline />
@@ -83,17 +86,14 @@ export default class RecordsBoard extends Component {
                     <Card className={classes.card}>
                       <CardMedia
                         className={classes.cardMedia}
-                        image='https://source.unsplash.com/random'
-                        title='Image title'
+                        image={`${card.img}`}
+                        title={card.title}
                       />
                       <CardContent className={classes.cardContent}>
                         <Typography gutterBottom variant='h5' component='h2'>
-                          Heading
+                          {card.title}
                         </Typography>
-                        <Typography>
-                          This is a media card. You can use this section to
-                          describe the content.
-                        </Typography>
+                        <Typography>{card.description}</Typography>
                       </CardContent>
                       <CardActions>
                         <Button size='small' color='primary'>
@@ -105,7 +105,6 @@ export default class RecordsBoard extends Component {
                 ))}
             </Grid>
           </Container>
-
           <div className={classes.heroButtons}>
             <Grid container spacing={4} justify='center'>
               <Grid item>

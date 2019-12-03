@@ -6,9 +6,9 @@ import RecordsBoard from './RecordsBoard';
 
 class RecordsBoardContainer extends Component {
   componentDidMount() {
-    const urlQuery = this.props.location.search;
-    console.log('URL QUERY NOT CONVERTED:', urlQuery);
-    console.log('URL QUERY CONVERTED:', queryString.parse(urlQuery));
+    // const urlQuery = this.props.location.search;
+    // console.log('URL QUERY NOT CONVERTED:', urlQuery);
+    // console.log('URL QUERY CONVERTED:', queryString.parse(urlQuery));
 
     const page =
       parseInt(queryString.parse(this.props.location.search).page) || 1;
@@ -18,7 +18,7 @@ class RecordsBoardContainer extends Component {
   render() {
     return (
       <>
-        <RecordsBoard />
+        <RecordsBoard records={this.props.records} />
       </>
     );
   }
