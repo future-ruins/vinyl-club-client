@@ -99,7 +99,7 @@ export default class RecordsBoard extends Component {
                         <Typography>{card.description}</Typography>
                       </CardContent>
                       <CardActions>
-                        <Button size='small' color='primary'>
+                        <Button size='small' color='primary' href='/record'>
                           View
                         </Button>
                       </CardActions>
@@ -108,15 +108,7 @@ export default class RecordsBoard extends Component {
                 ))}
             </Grid>
           </Container>
-          <div className={classes.heroButtons}>
-            <Grid container spacing={4} justify='center'>
-              <Grid item>
-                {/* <Button variant='outlined' color='primary'>
-                  Next page
-                </Button> */}
-              </Grid>
-            </Grid>
-          </div>
+          <div className={classes.heroButtons}></div>
         </main>
       </React.Fragment>
     );

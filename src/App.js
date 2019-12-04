@@ -8,6 +8,7 @@ import logo from './images/headset-24px.svg';
 import LoginFormContainer from './components/LoginFormContainer';
 import SignupFormContainer from './components/SignupFormContainer';
 import RecordsBoardContainer from './components/RecordsBoardContainer';
+import RecordPageContainer from './components/RecordPageContainer';
 
 class App extends Component {
   render() {
@@ -32,6 +33,7 @@ class App extends Component {
           <Route path='/' exact component={LoginFormContainer} />
           <Route path='/login' exact component={LoginFormContainer} />
           <Route path='/signup' exact component={SignupFormContainer} />
+          <Route path='/record' exact component={RecordPageContainer} />
 
           <footer>
             <br />

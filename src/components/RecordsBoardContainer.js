@@ -4,6 +4,7 @@ import { connect } from 'react-redux';
 import { fetchRecords } from '../actions/records';
 import queryString from 'query-string';
 import RecordsBoard from './RecordsBoard';
+import Grid from '@material-ui/core/Grid';
 
 class RecordsBoardContainer extends Component {
   componentDidMount() {
@@ -23,7 +24,7 @@ class RecordsBoardContainer extends Component {
         <Link
           to={`?page=${i}`}
           key={i}
-          style={{ margin: '5px', padding: '5px' }}>
+          style={{ margin: '5px', padding: '5px', align: 'center' }}>
           {i}
         </Link>
       );
@@ -45,7 +46,9 @@ class RecordsBoardContainer extends Component {
     return (
       <>
         <RecordsBoard records={this.props.recordsData.rows} />
-        {this.pagination(this.props.recordsData.pages)}
+        <Grid container spacing={4} justify='center'>
+          <Grid item>{this.pagination(this.props.recordsData.pages)}</Grid>
+        </Grid>
       </>
     );
   }
