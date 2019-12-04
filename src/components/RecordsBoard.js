@@ -88,7 +88,7 @@ export default class RecordsBoard extends Component {
                         className={classes.cardMedia}
                         component='img'
                         alt='record cover'
-                        height='160'
+                        height='140'
                         image={`${card.img}`}
                         title='Title'
                       />
@@ -111,9 +111,9 @@ export default class RecordsBoard extends Component {
           <div className={classes.heroButtons}>
             <Grid container spacing={4} justify='center'>
               <Grid item>
-                <Button variant='outlined' color='primary'>
+                {/* <Button variant='outlined' color='primary'>
                   Next page
-                </Button>
+                </Button> */}
               </Grid>
             </Grid>
           </div>

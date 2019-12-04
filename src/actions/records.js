@@ -9,10 +9,10 @@ export const fetchRecords = page => {
     request(`${baseURL}/records?page=${page}`)
       .then(response => {
         console.log('response.body getRecords', response.body);
-        const records = response.body.rows;
+        const recordsData = response.body;
         dispatch({
           type: GET_RECORDS,
-          payload: records,
+          payload: recordsData,
         });
       })
       .catch(console.error);

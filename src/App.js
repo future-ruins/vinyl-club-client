@@ -18,7 +18,7 @@ class App extends Component {
             <Link to='/records-board'>
               <img
                 className='icon'
-                height='40px'
+                height='30px'
                 alt='app logo'
                 src={logo}></img>
             </Link>
