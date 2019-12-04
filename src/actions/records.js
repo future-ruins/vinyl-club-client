@@ -18,3 +18,21 @@ export const fetchRecords = page => {
       .catch(console.error);
   };
 };
+
+// FETCH A SINGLE RECORD
+// export const GET_RECORDINFO = 'GET_RECORDINFO';
+
+// export const fetchOneRecord = id => {
+//   return dispatch => {
+//     request(`${baseURL}/record/${id}`)
+//       .then(response => {
+//         console.log('response.body getOneRecord', response.body);
+//         const recordInfo = response.body;
+//         dispatch({
+//           type: GET_RECORDINFO,
+//           payload: recordInfo,
+//         });
+//       })
+//       .catch(console.error);
+//   };
+// };

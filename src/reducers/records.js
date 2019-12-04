@@ -6,6 +6,8 @@ export default function(state = initialState, action = {}) {
   switch (action.type) {
     case GET_RECORDS:
       return action.payload;
+    // case GET_RECORDINFO:
+    //   return action.payload;
     default:
       return state;
   }

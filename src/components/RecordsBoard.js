@@ -99,7 +99,7 @@ export default class RecordsBoard extends Component {
                         <Typography>{card.description}</Typography>
                       </CardContent>
                       <CardActions>
-                        <Button size='small' color='primary' href='/record'>
+                        <Button size='small' color='primary' href='/record/:id'>
                           View
                         </Button>
                       </CardActions>

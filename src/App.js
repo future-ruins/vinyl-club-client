@@ -33,7 +33,7 @@ class App extends Component {
           <Route path='/' exact component={LoginFormContainer} />
           <Route path='/login' exact component={LoginFormContainer} />
           <Route path='/signup' exact component={SignupFormContainer} />
-          <Route path='/record' exact component={RecordPageContainer} />
+          <Route path='/record/:id' component={RecordPageContainer} />
 
           <footer>
             <br />
