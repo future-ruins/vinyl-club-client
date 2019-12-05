@@ -1,27 +1,23 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
-// import { fetchOneRecord } from '../actions/records';
+import { fetchOneRecord } from '../actions/records';
 import RecordPage from './RecordPage';
-import request from 'superagent';
-const baseURL = 'http://localhost:4000';
 
 class RecordPageContainer extends Component {
   componentDidMount() {
     const id = this.props.match.params.id;
-    request(`${baseURL}/record/${id}`)
-      .then(response => {
-        console.log('response.body getOneRecord', response.body);
-      })
-      .catch(console.error);
+    this.props.fetchOneRecord(id);
   }
 
   render() {
-    return <RecordPage recordInfo={this.props} />;
+    return <RecordPage selectedRecord={this.props.currentRecord} />;
   }
 }
 
 const mapStateToProps = state => ({
-  recordInfo: state,
+  currentRecord: state.recordsData,
 });
 
-export default connect(mapStateToProps, null)(RecordPageContainer);
+export default connect(mapStateToProps, { fetchOneRecord })(
+  RecordPageContainer
+);
