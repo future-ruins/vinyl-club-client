@@ -45,11 +45,15 @@ export const fetchCollection = id => {
   return dispatch => {
     request(`${baseURL}/user/${id}/records`)
       .then(response => {
-        console.log('response.body fetchCollection', response.body);
+        // console.log(
+        //   'response.body fetchCollection',
+        //   response.body.records[0].user
+        // );
         const collection = response.body;
+        const collectionOwner = response.body.records[0].user;
         dispatch({
           type: GET_USERCOLLECTION,
-          payload: collection,
+          payload: { ...collection, ...collectionOwner },
         });
       })
       .catch(console.error);

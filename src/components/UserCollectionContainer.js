@@ -13,7 +13,10 @@ class UserCollectionContainer extends Component {
   render() {
     return (
       <>
-        <UserCollection records={this.props.recordsData.records} />
+        <UserCollection
+          records={this.props.recordsData.records}
+          collectionOwner={this.props.recordsData.username}
+        />
       </>
     );
   }

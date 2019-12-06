@@ -12,7 +12,7 @@ Related repos:
 ## Table of contents:
 
 - **[How to install](#how-to-install)**
-- **[Features built so far](#features-built-so-far)**
+- **[Features](#features-built-so-far)**
 - **[Create React App docs](#create-react-app)**
 
 ## How to install
