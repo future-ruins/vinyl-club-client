@@ -74,13 +74,20 @@ export default class RecordsBoard extends Component {
                 Check the records that are up for exchange. Click on a record to
                 see detailed info.
               </Typography>
+
+              {/* <Button
+                type='submit'
+                variant='outlined'
+                color='primary'
+                className={classes.submit}>
+                Add record
+              </Button> */}
             </Container>
           </div>
 
           <SearchAppBar></SearchAppBar>
 
           <Container className={classes.cardGrid} maxWidth='md'>
-            {/* End hero unit */}
             <Grid container spacing={4}>
               {!cards && 'Loading...'}
               {cards &&
