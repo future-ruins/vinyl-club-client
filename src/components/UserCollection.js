@@ -46,8 +46,9 @@ const classes = makeStyles(theme => ({
 export default class UserCollection extends Component {
   render() {
     const records = this.props.records;
+    const postedBy = this.props.collectionOwner;
     const cards = records;
-    console.log('cards', cards);
+    console.log('cards & postedBy', cards, postedBy);
 
     return (
       <React.Fragment>
@@ -62,7 +63,7 @@ export default class UserCollection extends Component {
                 align='center'
                 color='textPrimary'
                 gutterBottom>
-                UserX's collection
+                {`${postedBy}'s collection`}
               </Typography>
 
               <Typography
@@ -70,8 +71,8 @@ export default class UserCollection extends Component {
                 align='center'
                 color='textSecondary'
                 paragraph>
-                Check the records UserX posted for exchange. Click on a record
-                to see detailed info.
+                {`Check the records ${postedBy} posted for exchange. Click on a record
+                to see detailed info`}
               </Typography>
             </Container>
           </div>

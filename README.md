@@ -12,7 +12,7 @@ Related repos:
 ## Table of contents:
 
 - **[How to install](#how-to-install)**
-- **[Features built so far](#features-built-so-far)**
+- **[Features](#features-built-so-far)**
 - **[Create React App docs](#create-react-app)**
 
 ## How to install
@@ -28,7 +28,7 @@ In the project directory
 
 4. Checkout the **[Server ReadMe](https://github.com/future-ruins/vinyl-club-server/blob/development/README.md)** to install and run the server.
 
-## Features built so far
+## Features
 
 - **Sign-up and login pages:** users can sign-up and login to use the App
 
