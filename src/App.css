@@ -39,3 +39,12 @@ footer {
   justify-content: center;
   font-size: calc(2px + 2vmin);
 }
+
+.centeredImage {
+  text-align: center;
+  display: block;
+  justify-content: center;
+  align-items: center;
+  margin: auto;
+  border-radius: 1.5%;
+}
