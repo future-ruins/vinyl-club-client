@@ -28,7 +28,7 @@ In the project directory
 
 4. Checkout the **[Server ReadMe](https://github.com/future-ruins/vinyl-club-server/blob/development/README.md)** to install and run the server.
 
-## Features built so far
+## Features
 
 - **Sign-up and login pages:** users can sign-up and login to use the App
 
