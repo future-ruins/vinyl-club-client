@@ -31,7 +31,7 @@ class RecordPage extends Component {
           <br />
           Genre: {this.props.selectedRecord.genre}
           <br />
-          Posted by: {this.props.selectedRecord.userId}
+          Posted by: {this.props.selectedRecord.username}
         </Typography>
 
         <Typography

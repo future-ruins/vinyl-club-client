@@ -26,11 +26,12 @@ export const fetchOneRecord = id => {
   return dispatch => {
     request(`${baseURL}/record/${id}`)
       .then(response => {
-        console.log('response.body getOneRecord', response.body);
+        console.log('response.body getOneRecord', response.body.user);
         const recordInfo = response.body;
+        const postedBY = response.body.user;
         dispatch({
           type: GET_RECORDINFO,
-          payload: recordInfo,
+          payload: { ...recordInfo, ...postedBY },
         });
       })
       .catch(console.error);
