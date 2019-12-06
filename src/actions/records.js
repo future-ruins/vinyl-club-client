@@ -37,3 +37,21 @@ export const fetchOneRecord = id => {
       .catch(console.error);
   };
 };
+
+// FETCH A USER'S COLLECTION
+export const GET_USERCOLLECTION = 'GET_USERCOLLECTION';
+
+export const fetchCollection = id => {
+  return dispatch => {
+    request(`${baseURL}/user/${id}/records`)
+      .then(response => {
+        console.log('response.body fetchCollection', response.body);
+        const collection = response.body;
+        dispatch({
+          type: GET_USERCOLLECTION,
+          payload: collection,
+        });
+      })
+      .catch(console.error);
+  };
+};

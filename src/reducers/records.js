@@ -1,4 +1,8 @@
-import { GET_RECORDS, GET_RECORDINFO } from '../actions/records';
+import {
+  GET_RECORDS,
+  GET_RECORDINFO,
+  GET_USERCOLLECTION,
+} from '../actions/records';
 
 const initialState = [];
 
@@ -7,6 +11,8 @@ export default function(state = initialState, action = {}) {
     case GET_RECORDS:
       return action.payload;
     case GET_RECORDINFO:
+      return action.payload;
+    case GET_USERCOLLECTION:
       return action.payload;
     default:
       return state;

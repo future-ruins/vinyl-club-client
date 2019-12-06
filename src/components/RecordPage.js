@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import Typography from '@material-ui/core/Typography';
+import Link from '@material-ui/core/Link';
 
 class RecordPage extends Component {
   render() {
@@ -27,11 +28,14 @@ class RecordPage extends Component {
           align='center'
           color='textSecondary'
           paragraph>
-          Format: {`${this.props.selectedRecord.format}"`}
+          {`Format: ${this.props.selectedRecord.format}"`}
           <br />
-          Genre: {this.props.selectedRecord.genre}
+          {`Genre: ${this.props.selectedRecord.genre}`}
           <br />
-          Posted by: {this.props.selectedRecord.username}
+          {'Posted by: '}
+          <Link href={`/user/${this.props.selectedRecord.userId}/records`}>
+            {this.props.selectedRecord.username}
+          </Link>
         </Typography>
 
         <Typography
