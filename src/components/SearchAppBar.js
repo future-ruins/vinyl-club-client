@@ -66,7 +66,7 @@ export default function SearchAppBar() {
             <SearchIcon />
           </div>
           <InputBase
-            placeholder='Search by artist or genre…'
+            placeholder='Search records by artist or genre…'
             classes={{
               root: classes.inputRoot,
               input: classes.inputInput,

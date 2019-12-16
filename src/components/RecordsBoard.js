@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import '../App.css';
+import UserMenu from './UserMenu';
 import SearchAppBar from './SearchAppBar';
 import Button from '@material-ui/core/Button';
 import Card from '@material-ui/core/Card';
@@ -56,6 +57,10 @@ export default class RecordsBoard extends Component {
         <main>
           {/* Hero unit */}
           <div className={classes.heroContent}>
+            <Container maxWidth='md' align='right'>
+              <UserMenu></UserMenu>
+            </Container>
+
             <Container maxWidth='sm'>
               <Typography
                 component='h1'
@@ -85,7 +90,9 @@ export default class RecordsBoard extends Component {
             </Container>
           </div>
 
-          <SearchAppBar></SearchAppBar>
+          <Container maxWidth='xs'>
+            <SearchAppBar></SearchAppBar>
+          </Container>
 
           <Container className={classes.cardGrid} maxWidth='md'>
             <Grid container spacing={4}>
