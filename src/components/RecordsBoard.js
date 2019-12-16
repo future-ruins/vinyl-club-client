@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import '../App.css';
-import UserMenu from './UserMenu';
+import RegisteredUserMenu from './RegisteredUserMenu';
 import SearchAppBar from './SearchAppBar';
 import Button from '@material-ui/core/Button';
 import Card from '@material-ui/core/Card';
@@ -58,7 +58,7 @@ export default class RecordsBoard extends Component {
           {/* Hero unit */}
           <div className={classes.heroContent}>
             <Container maxWidth='md' align='right'>
-              <UserMenu></UserMenu>
+              <RegisteredUserMenu></RegisteredUserMenu>
             </Container>
 
             <Container maxWidth='sm'>

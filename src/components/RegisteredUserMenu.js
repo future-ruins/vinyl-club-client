@@ -4,7 +4,7 @@ import Menu from '@material-ui/core/Menu';
 import MenuItem from '@material-ui/core/MenuItem';
 import menuIcon from '../images/menu-24px.svg';
 
-export default function UserMenu() {
+export default function RegisteredUserMenu() {
   const [anchorEl, setAnchorEl] = React.useState(null);
 
   const handleClick = event => {
