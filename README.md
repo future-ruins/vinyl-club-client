@@ -1,5 +1,7 @@
 # Vinyl Club - App Client
 
+![](howto.gif)
+
 ## About this project
 
 Vinyl Club is a project built for practice purposes. The idea was to develop a simple app that allows local registered users / record collectors to exchange vinyl records from their collections. The project is not yet finished.
