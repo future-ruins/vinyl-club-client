@@ -1,6 +1,6 @@
 # Vinyl Club - App Client
 
-![](howto-small.gif)
+![](howto.gif)
 
 ## About this project
 
